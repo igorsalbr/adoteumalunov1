@@ -1,6 +1,5 @@
 .title {
-    text-align: center;
-    background: rgb(9, 9, 102);
+    background-image: linear-gradient(black, blue);
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +10,7 @@
     font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border-radius: 5px;
     height: 80px;
-    
+    display: inline-block;
 
   }
   .txt {
@@ -20,7 +19,11 @@
     color: rgb(252, 255, 82);
     margin: 1%;
 
+
   }
   .img{
+    margin-left: 20px;
+    border-style: double;
     border-radius: 100%;
+    
   }
