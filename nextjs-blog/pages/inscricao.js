@@ -10,25 +10,25 @@ export default function Inscreva() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Topbar /> 
-      <body>
-        <a className="title">
+      <main>
+        <h1 className="title">
          Inscreva-se para a turma de {ano+1}
-        </a>
+        </h1>
 
         <p className="description">
           O projeto
         </p>
         <p>
           <label for="text"> </label>
-          <textarea name="text" id="nome" cols="40" rows="5" placeholder='Nome:'></textarea>
+          <textarea name="text" id="nome" cols="40" rows="1" placeholder='Nome:'></textarea>
         </p>
         <p>
           <label for="text"> </label>
-          <textarea name="text" id="email" cols="40" rows="5" placeholder='email:'></textarea>
+          <textarea name="text" id="email" cols="40" rows="1" placeholder='email:'></textarea>
         </p>
         <p>
           <label for="text"> </label>
-          <textarea name="text" id="numero" cols="40" rows="5" placeholder='número:'></textarea>
+          <textarea name="text" id="numero" cols="40" rows="1" placeholder='número:'></textarea>
         </p>
         <p>
             <input type="button" value="Submit!" id="btnSubmit" />
@@ -36,7 +36,7 @@ export default function Inscreva() {
 
         <SideNav/>    
 
-      </body>
+      </main>
 
       <footer>
         <a
@@ -50,11 +50,11 @@ export default function Inscreva() {
       </footer>
 
       <style jsx>{`
-        .container {
-          
+        h1 .title{
+          align-items: center;
         }
 
-        body {
+        main {
           padding: 5rem 0;
           flex: 1;
           display: flex;
@@ -104,7 +104,15 @@ export default function Inscreva() {
           font-size: 4rem;
         }
 
-     
+        .title,
+        .description {
+          text-align: center;
+        }
+
+        .description {
+          line-height: 1.5;
+          font-size: 1.5rem;
+        }
 
         code {
           background: #fafafa;
