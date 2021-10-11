@@ -1,0 +1,26 @@
+.title {
+    text-align: center;
+    background: rgb(9, 9, 102);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0% 0% 80% 0%;
+    width: 100%;
+    z-index: 1;
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 5px;
+    height: 80px;
+    
+
+  }
+  .txt {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(252, 255, 82);
+    margin: 1%;
+
+  }
+  .img{
+    margin: 0% 0% 0% 80%;
+  }

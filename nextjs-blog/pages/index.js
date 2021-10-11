@@ -1,5 +1,8 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import SideNav from '../components/sideNav'
+import Topbar from '../components/topBar';
+var ano = 2021;
+
 export default function Home() {
   return (
     <div className="container">
@@ -7,45 +10,116 @@ export default function Home() {
         <title>Adote um aluno</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Topbar />
+      <SideNav/>       
+      <body>
 
-      <main>
-       <p> seguramente
-         <h1 className="title">
-           
-           <a><Link href ='/aboutus'>Adote um aluno!</Link></a>
-           
-         </h1>
-        </p>
-      </main>
 
-      <footer>
-       
-      </footer>
 
-      <style jsx>{`
-        p {
-          color: blue;
+        
+        <div className= 'forum'>
+          <p >Aqui será um blog </p>
+          <fieldset className= 'viraCaixadeDialogo'>
+            <legend>Comments</legend>
+            <p>
+              <label for="text"> </label>
+              <textarea name="text" id="text" cols="30" rows="30" placeholder='Mande sua dúvida!'></textarea>
+            </p>
+            </fieldset>
+            <p>
+              <input type="button" value="Submit!" id="btnSubmit" />
+           </p>
+
+          </div>
+        </body>
+        <footer>
+        <p>adc info</p>
+      </footer><style jsx>{`
+        
+        .viraCaixadeDialogo {
+          text-align: center;
+          border: 1px solid #eaeaea;
+          border-radius: 10px;
         }
-        .title {
-          color: red;
-        }
-      `}</style>
 
-      <style jsx global>{`
+        .forum {
+          margin: 60px 190px;
+          
+        }
+      
+      input {
+          width: 200px;
+      }
+      
+      
+      input.radio, input.submit {
+          width: auto;
+      }
+      
+      /* style form elements on focus */
+      input:focus, textarea:focus {
+          background: #ffc;
+      }
+      
+      input.radio {
+          float: left;
+          margin-right: 1em;
+      }
+      
+      textarea {
+          background: white;
+          width: 80%;
+          height: 100px;
+      }
+      
+      /* Hack to make sure the floated radio buttons
+         sit next to the labels correctly in IE/Mac*/
+      
+      /* This is the style I want IE/Mac to see */
+      input.radio + label {
+          text-indent: 2em;
+      }
+      
+      /* Using the commented backslash filter, I'm resetting
+         the above rule for everything other than IE5/Mac \*/
+      input.radio + label {
+          text-indent: 0;
+      }
+      
+      `}</style><style jsx global>{`
         html,
         body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-          background-color: blue;
+          display: inlist;
+          
+         
         }
 
         * {
-          box-sizing: border-box;
+      
         }
       `}</style>
     </div>
   )
 }
+/** 
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  function getItem() {     return JSON.parse(localStorage.getItem("duvida")) }
+  const res = await getItem()
+  console.log(res)
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      res,
+    },
+  }
+}
+
+export async function addItem(item) {
+  let list = JSON.parse(localStorage.getItem("duvida"))
+  list.push(item);
+  localStorage.setItem("duvida",JSON.stringify(list))
+}
+*/

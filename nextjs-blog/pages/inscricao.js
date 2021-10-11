@@ -1,52 +1,42 @@
 import Head from 'next/head'
-
-export default function Sobre() {
+import SideNav from '../components/sideNav';
+import Topbar from '../components/topBar';
+var ano = 2021;
+export default function Inscreva() {
   return (
     <div className="container">
       <Head>
         <title>Adote um aluno</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a>Aboutus!</a>
-        </h1>
+      <Topbar /> 
+      <body>
+        <a className="title">
+         Inscreva-se para a turma de {ano+1}
+        </a>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          O projeto
+        </p>
+        <p>
+          <label for="text"> </label>
+          <textarea name="text" id="nome" cols="40" rows="5" placeholder='Nome:'></textarea>
+        </p>
+        <p>
+          <label for="text"> </label>
+          <textarea name="text" id="email" cols="40" rows="5" placeholder='email:'></textarea>
+        </p>
+        <p>
+          <label for="text"> </label>
+          <textarea name="text" id="numero" cols="40" rows="5" placeholder='número:'></textarea>
+        </p>
+        <p>
+            <input type="button" value="Submit!" id="btnSubmit" />
         </p>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <SideNav/>    
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </body>
 
       <footer>
         <a
@@ -61,15 +51,10 @@ export default function Sobre() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          
         }
 
-        main {
+        body {
           padding: 5rem 0;
           flex: 1;
           display: flex;
@@ -119,15 +104,7 @@ export default function Sobre() {
           font-size: 4rem;
         }
 
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
+     
 
         code {
           background: #fafafa;
@@ -138,15 +115,6 @@ export default function Sobre() {
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
 
         .card {
           margin: 1rem;
@@ -182,23 +150,13 @@ export default function Sobre() {
           height: 1em;
         }
 
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
+
       `}</style>
 
       <style jsx global>{`
-            html,
+            
             body {
-              padding: 0;
-              margin: 0;
-              font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-                Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-                sans-serif;
-              background-color: blue;
+              display: inlist;
             }
     
             * {
