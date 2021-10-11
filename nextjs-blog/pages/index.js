@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import SideNav from '../components/sideNav'
+import Head from 'next/head';
+import SideNav from '../components/sideNav';
 import Topbar from '../components/topBar';
+import {getItem, addItem} from '../shared'
 var ano = 2021;
-
 export default function Home() {
   return (
     <div className="container">
@@ -20,7 +20,7 @@ export default function Home() {
         <div className= 'forum'>
           <p >Aqui será um blog </p>
           <fieldset className= 'viraCaixadeDialogo'>
-            <legend>Comments</legend>
+            <legend>Dúvidas</legend>
             <p>
               <label for="text"> </label>
               <textarea name="text" id="text" cols="30" rows="30" placeholder='Mande sua dúvida!'></textarea>
@@ -101,11 +101,11 @@ export default function Home() {
     </div>
   )
 }
-/** 
+ 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  function getItem() {     return JSON.parse(localStorage.getItem("duvida")) }
+ 
   const res = await getItem()
   console.log(res)
   // By returning { props: { posts } }, the Blog component
@@ -117,9 +117,3 @@ export async function getStaticProps() {
   }
 }
 
-export async function addItem(item) {
-  let list = JSON.parse(localStorage.getItem("duvida"))
-  list.push(item);
-  localStorage.setItem("duvida",JSON.stringify(list))
-}
-*/
