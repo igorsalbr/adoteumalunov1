@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import SideNav from '../components/sideNav';
 import Topbar from '../components/topBar';
-import {getItem, addItem} from '../shared'
+
 var ano = 2021;
+
+              
 export default function Home() {
   return (
     <div className="container">
@@ -13,6 +15,7 @@ export default function Home() {
       <Topbar />
       <SideNav/>       
       <body>
+      
 
 
 
@@ -27,11 +30,17 @@ export default function Home() {
             </p>
             </fieldset>
             <p>
-              <input type="button" value="Submit!" id="btnSubmit" />
+              <input type="button" value="Submit!" id="btnSubmit" onClick={console.log()}/>
+              
            </p>
 
           </div>
+          <div className='forum'>
+            
+
+          </div>
         </body>
+        
         <footer>
         <p>adc info</p>
       </footer><style jsx>{`
@@ -98,10 +107,14 @@ export default function Home() {
       
         }
       `}</style>
+      <script>
+        
+      </script>
     </div>
   )
 }
- 
+
+/** 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
@@ -116,4 +129,4 @@ export async function getStaticProps() {
     },
   }
 }
-
+*/
