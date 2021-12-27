@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <div className='navbar'>
             <Image src="/../public/adoteimg.png"
-                alt="adote" height={300} width={1000}
+                alt="adote" height={250} width={1980}
             />
             <div>
                 <a className='redirect'>&bull; Home</a>

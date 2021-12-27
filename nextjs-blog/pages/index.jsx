@@ -3,10 +3,19 @@ import MessageForm from "../components/MessageForm"
 import NavBar from "../components/NavBar"
 function HomePage() {
     return <>
-        <NavBar />
-        <div>Welcome to Next.js!</div>
-        <MessageForm />
+        <div className="container">
+            <NavBar />
+            <br /><br />
+            <MessageForm />
+        </div>
         <Footer />
+
+
+        <style jsx>{`
+        *{
+            background-color: deepskyblue;
+        }
+      `}</style>
 
 
     </>
