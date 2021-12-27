@@ -16,7 +16,7 @@ function HomePage() {
 
         <style jsx>{`
         *{
-            background-color: deepskyblue;
+            background-color: #5b18de;
         }
       `}</style>
 

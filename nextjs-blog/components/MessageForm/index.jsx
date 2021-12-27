@@ -23,7 +23,7 @@ class MessageForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Dúvida:
+                    Escreva sua dúvida:
                     <textarea value={this.state.value} onChange={this.handleChange} />
                 </label>
                 <input type="submit" value="Enviar" />
