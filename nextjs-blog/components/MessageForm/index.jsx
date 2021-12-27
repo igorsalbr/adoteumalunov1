@@ -3,7 +3,7 @@ class MessageForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 'Escreva sua dúvida.'
+            value: 'Mande-nos sua dúvida.'
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -27,6 +27,18 @@ class MessageForm extends React.Component {
                     <textarea value={this.state.value} onChange={this.handleChange} />
                 </label>
                 <input type="submit" value="Enviar" />
+                <style jsx>{`
+                    form{
+                        text-align: center
+                    }
+                    textarea{
+                    width: 100%;
+                    height: 100%;
+            }
+                    label{
+                    margin: 8px;
+            }
+                `}</style>
             </form>
         );
     }

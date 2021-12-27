@@ -7,6 +7,9 @@ function HomePage() {
             <NavBar />
             <br /><br />
             <MessageForm />
+            <br /><br />
+
+
         </div>
         <Footer />
 

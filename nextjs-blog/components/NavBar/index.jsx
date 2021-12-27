@@ -16,6 +16,7 @@ function NavBar() {
         .navbar{
         width: 100%;
         height: auto;
+        text-align: center;
 }
         .navbar, img{
         height: auto;
