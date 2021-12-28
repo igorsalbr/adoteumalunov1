@@ -1,12 +1,11 @@
 import Footer from "../components/Footer"
 import MessageForm from "../components/MessageForm"
 import NavBar from "../components/NavBar"
-function HomePage() {
+function inscricao() {
     return <>
         <div className="container">
             <NavBar />
             <br /><br />
-            <MessageForm />
             <br /><br />
 
 
@@ -25,4 +24,4 @@ function HomePage() {
     </>
 }
 
-export default HomePage
+export default inscricao

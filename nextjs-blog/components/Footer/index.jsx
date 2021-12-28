@@ -2,17 +2,17 @@ import Image from 'next/image';
 function Footer() {
     return (<footer className='footer'>
         <Image src="/../public/Minerva.png"
-            alt="minerva" width={100}
+            alt="minerva" width={120}
             height={100} />
         <div className="centralizar">
             <p>Fale conosco:</p>
             <a className="wpp" href='https://wa.me/5512982986505'><Image src="/../public/whatsapplogo.png"
                 alt="wpp" width={30}
-                height={30} />(12)98298-6505</a>
+                height={30} />   (12)98298-6505</a>
             <br />
             <a className="insta" href='https://www.instagram.com/adoteumaluno_/'><Image src="/../public/insta.png"
                 alt="insta" width={30}
-                height={30} />@adoteumaluno</a>
+                height={30} />   @adoteumaluno</a>
         </div>
         <style jsx>{`
         .footer{

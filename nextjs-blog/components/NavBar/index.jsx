@@ -8,9 +8,9 @@ function NavBar() {
                 alt="adote" height={250} width={1980}
             />
             <div>
-                <a className='redirect'>&bull; <strong>Home</strong></a>
-                <a className='redirect'>&bull; <strong>Sobre nos</strong></a>
-                <a className='redirect'>&bull; <strong>Inscreva-se</strong> </a>
+                <a className='redirect' href='/'>&bull; <strong>Home</strong></a>
+                <a className='redirect' href='/sobre'>&bull; <strong>Sobre nós</strong></a>
+                <a className='redirect' href='/inscricao'>&bull; <strong>Inscreva-se</strong> </a>
             </ div>
             <style jsx>{`
         .navbar{
