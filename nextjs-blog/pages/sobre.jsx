@@ -1,5 +1,4 @@
 import Footer from "../components/Footer"
-import MessageForm from "../components/MessageForm"
 import NavBar from "../components/NavBar"
 function Sobre() {
     return <>
@@ -20,9 +19,7 @@ function Sobre() {
 
 
         <style jsx>{`
-        *{
-            background-color: #5b18de;
-        }
+        
       `}</style>
 
 

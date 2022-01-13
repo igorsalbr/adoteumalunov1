@@ -5,7 +5,7 @@ function NavBar() {
         <header>
             <img src="adoteimg.png" className='bola' alt='adote' width={150} height={150} />
             <hr className='prim' />
-            <div>
+            <div className='a1p'>
                 <a className='a1' href='/'>&bull; Home</a>
                 <a className='a1' href='/sobre'>&bull; Sobre nós</a>
                 <a className='a1' href='/inscricao'>&bull; Entrar</a>
@@ -25,10 +25,15 @@ function NavBar() {
                 z-index: -1;
                 
 }
+            .a1p{
+                display:flex;
+            }
             .a1{
                 margin: 10%;
                 text-decoration:none;
                 color: black;
+                flex: 1;
+                margin-top:0;
 }
             a:hover{
                 color:blue;

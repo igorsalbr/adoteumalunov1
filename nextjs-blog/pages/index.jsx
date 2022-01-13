@@ -1,6 +1,26 @@
 import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
-function HomePage() {
+import { useState } from 'react'
+function HomePage(props) {
+    const [textField, setTextField] = useState('');
+    const [fileField, setFileField] = useState('');
+    const [checkboxField, setCheckboxField] = useState('')
+
+    const inputsHandler = (e) => {
+        if (e.target.name == 'text') {
+            setTextField(e.target.value)
+        }
+        if (e.target.name == 'file') {
+            setFileField(e.target.value)
+        }
+        if (e.target.name == 'checkbox') {
+            setCheckboxField(e.target.value)
+        }
+    }
+
+    const submitButton = () => {
+        alert(textField + ' ' + fileField + ' ' + checkboxField)
+    }
     return <>
         <head>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,19 +44,19 @@ function HomePage() {
                 <form className='formes'>
                     <label>Explique sua dúvida</label>
                     <br />
-                    <textarea></textarea><br />
-                    <input type='file' /><br />
+                    <textarea onChange={inputsHandler} value={textField} type='text' name='text'></textarea><br />
+                    <input onChange={inputsHandler} value={fileField} type='file' name='file' /><br />
                     <br />
                     <div className='materia'>
-                        <input type="checkbox" id="mat" name="mat" value="mat" />
+                        <input type="checkbox" id="mat" name="checkbox" onChange={inputsHandler} value='mat' />
                         <label for="mat"> Matemática</label><br />
-                        <input type="checkbox" id="fis" name="fis" value="fis" />
+                        <input type="checkbox" id="fis" name="checkbox" onChange={inputsHandler} value='fis' />
                         <label for="fis"> Física</label><br />
-                        <input type="checkbox" id="quim" name="quim" value="quim" />
+                        <input type="checkbox" id="quim" name="checkbox" onChange={inputsHandler} value='quim' />
                         <label for="quim"> Química</label><br />
                     </div>
                     <br />
-                    <button type="submit" value="Enviar" className='btn'>Enviar</button>
+                    <button type="submit" onClick={submitButton} value="Enviar" className='btn'>Enviar</button>
                 </form>
                 <br />
             </body>
@@ -53,7 +73,8 @@ function HomePage() {
             .convocacao{
                 border-radius: 8px;
                 border: outset;
-                background-color: #0ff;
+                background-color: rgb(109, 212, 253);
+                color: black;
             }
             .avisos{
                 display: list-item;
@@ -63,6 +84,7 @@ function HomePage() {
                 border-style: inset;
                 padding:0px;
                 border-radius: 20px;
+                background-color: #FFFFE0;
             }
             textarea{
                 width: 90%;

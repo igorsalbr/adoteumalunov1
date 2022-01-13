@@ -1,5 +1,4 @@
 import Footer from "../components/Footer"
-import MessageForm from "../components/MessageForm"
 import NavBar from "../components/NavBar"
 function inscricao() {
     return <>
