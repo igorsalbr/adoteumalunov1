@@ -1,36 +1,40 @@
 import Image from 'next/image';
-
 function NavBar() {
 
     return (
-        <div className='navbar'>
-            <Image src="/../public/adoteimg.png"
-                alt="adote" height={250} width={1980}
-            />
+        <header>
+            <img src="adoteimg.png" className='bola' alt='adote' width={150} height={150} />
+            <hr className='prim' />
             <div>
-                <a className='redirect' href='/'>&bull; <strong>Home</strong></a>
-                <a className='redirect' href='/sobre'>&bull; <strong>Sobre nós</strong></a>
-                <a className='redirect' href='/inscricao'>&bull; <strong>Inscreva-se</strong> </a>
-            </ div>
-            <style jsx>{`
-        .navbar{
-        width: 100%;
-        height: auto;
-        text-align: center;
+                <a className='a1' href='/'>&bull; Home</a>
+                <a className='a1' href='/sobre'>&bull; Sobre nós</a>
+                <a className='a1' href='/inscricao'>&bull; Entrar</a>
+            </div>
+            <style jsx>{`      
+            header {
+                width: 100%;
+                height: auto;
+                text-align: center;
 }
-        .navbar, img{
-        height: auto;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        }
-        .redirect{
-        margin: 10%;
+            .bola{
+                border-radius: 50%;
 }
-        
-      `}</style>
-        </ div>
+            .prim{
+                position: relative;
+                bottom: 90px;
+                z-index: -1;
+                
+}
+            .a1{
+                margin: 10%;
+                text-decoration:none;
+                color: black;
+}
+            a:hover{
+                color:blue;
+}
+                `}</style>
+        </ header>
     )
 }
 
