@@ -1,12 +1,25 @@
 import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
+import { signInWithRedirect, onAuthStateChanged } from "firebase/auth";
+import { auth, provider } from './../services/firebase'
+import { useAppContext } from "../global/AppContext"
+
+
 function inscricao() {
+
+    const { user, setUser } = useAppContext();
+    if (!user) {
+        signInWithRedirect(auth, provider);
+    }
+    onAuthStateChanged(auth, (loggedUser) => {
+        if (loggedUser) {
+            setUser(loggedUser);
+        } else { setUser('') }
+    })
+
+
     return <>
-        <head>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
-        </head>
+
         <div className="container">
             <NavBar />
             <br /><br />
