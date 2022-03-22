@@ -4,7 +4,7 @@ import { useAppContext } from "../global/AppContext";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../services/firebase';
 
-function Sobre() {
+function plataforma() {
     const { user, setUser } = useAppContext();
     onAuthStateChanged(auth, (loggedUser) => {
         if (loggedUser) {
@@ -34,4 +34,4 @@ function Sobre() {
     </>
 }
 
-export default Sobre
+export default plataforma

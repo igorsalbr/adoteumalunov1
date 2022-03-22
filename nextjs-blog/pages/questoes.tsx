@@ -9,7 +9,7 @@ import { useAppContext } from "../global/AppContext";
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 
-function HomePage() {
+function questoes() {
     const [textField, setTextField] = useState('');
     const [fileField, setFileField] = useState('');
     const [checkboxField, setCheckboxField] = useState('');
@@ -144,4 +144,4 @@ function HomePage() {
     </>
 }
 
-export default HomePage
+export default questoes
