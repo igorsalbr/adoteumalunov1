@@ -12,21 +12,42 @@ function Sobre() {
         } else { setUser('') }
     })
     return <>
+        <header>
+            <NavBar/>
+        </header>
         <div className="all">
-            <header>
-                <NavBar/>
-            </header>
-            <body>
-                <h2 className="font-bold text-2xl">Quem Somos</h2>
+            <body className="center">
+                <h2 className="titulo">O que fazemos?</h2>
+                <p className="parag">Fazemos tal</p>
+                <h2 className="titulo">Quem somos?</h2>
+                <p className="parag">Somos tal</p>
+                <h2 className="titulo">Já é universitário? Venha ser monitor!!</h2>
+                <p className="parag">Link do forms</p>
             </body>
+            </div>
 
             <br />
             <Footer />
-        </div>
+        
 
 
         <style jsx>{`
-        
+        .all {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr
+        }
+        .center{
+            grid-column: 1/-1;
+            text-align:center;
+        }
+        .titulo{
+            padding: 5px;
+
+        }
+        .parag{
+            text-align: justify;
+            margin-left: 20px;
+        }
         
       `}</style>
 

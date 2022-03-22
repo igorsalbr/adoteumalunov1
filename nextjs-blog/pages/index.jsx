@@ -10,134 +10,70 @@ import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 
 function HomePage() {
-    const [textField, setTextField] = useState('');
-    const [fileField, setFileField] = useState('');
-    const [checkboxField, setCheckboxField] = useState('');
     const { user, setUser } = useAppContext();
 
-
-
-    const inputsHandler = (e) => {
-        if (e.target.name == 'text') {
-            setTextField(e.target.value)
-        }
-        if (e.target.name == 'file') {
-            setFileField(e.target.value)
-            alert("Upload concluído")
-        }
-        if (e.target.name == 'checkbox') {
-            setCheckboxField(e.target.value)
-        }
-    }
-
-    const submitButton = async () => {
-        const response = {
-            text: textField,
-            file: fileField,
-            checkbox: checkboxField,
-        }
-        alert(await response.file)
-    }
     onAuthStateChanged(auth, (loggedUser) => {
         if (loggedUser) {
             setUser(loggedUser);
         } else { setUser('') }
     })
+    function onClickHandler(){
+        return ''
+    }
 
 
 
     return <>
-        <div className='all'>
             <NavBar />
             <br /><br />
-            <div className="body">
-                <br />
-                <h3 className='convocacao'>Este site foi feito de alunos para alunos! Sintam-se à vontade para ajudar outras pessoas respondendo dúvidas!</h3>
-                <br />
+            <div className="container">
+                <a href='https://linktr.ee/adoteumaluno'> Inscreva-se para a TURMA 2022</a>
                 <ul className='avisos'>
                     <h3>Avisos:</h3>
                     <li>&bull; Ao se cadastrar, suas duvidas ficam salvas na área do aluno.</li>
                     <li>&bull; Datas de proximos vest?</li>
-                    <li>&bull; Selecione o tópico da duvida</li>
-                    <li>&bull; Explique a duvida e anexe fotos que ajudem a entender</li><br />
+                    <li>&bull; Nosso objetivo é criar uma cultura de ajuda e soliedariedade</li>
+                    <li>&bull; Sinta-se a vontade para responder as duvidas de outros alunos</li><br />
                 </ul>
-                <form className='formes' >
-                    <label htmlFor="text">Explique sua dúvida</label>
-                    <br />
-                    <textarea onChange={inputsHandler} value={textField} type='text' name='text'></textarea><br />
-                    <input onChange={inputsHandler} value={fileField} className="escond" multiple type='file' name='file' id="icon-button-file" />
-                    <label htmlFor="icon-button-file">
-                        <IconButton color="primary" component="span">
-                            Upload<PhotoCamera />
-                        </IconButton>
-                    </label>
-                    <br />
-                    <div className='materia'>
-                        <input type="checkbox" id="mat" name="checkbox" onChange={inputsHandler} value='mat' />
-                        <label htmlFor="mat"> Matemática</label><br />
-                        <input type="checkbox" id="fis" name="checkbox" onChange={inputsHandler} value='fis' />
-                        <label htmlFor="fis"> Física</label><br />
-                        <input type="checkbox" id="quim" name="checkbox" onChange={inputsHandler} value='quim' />
-                        <label htmlFor="quim"> Química</label><br />
-                    </div>
-                    <br />
-                    <Button variant="contained" type="submit" onClick={submitButton} value="Enviar" className='btn'>Enviar</Button>
-                </form>
-                <br />
-            </div>
-            <br /><br />
-
 
             <br />
-            <Footer />
         </div>
+        <Footer />
+
         <style jsx>{`
-            .body{
-                text-align: center;
+            .container{
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
                 
             }
-            .convocacao{
-                border-radius: 8px;
-                border: outset;
-                color: black;
-                background-color: lightyellow;
-                position: relative;
-                bottom: 50px;
-            }
             .avisos{
+                margin-top: 10px;
+                grid-column:1/-1;
+                justify-self:center;
                 display: list-item;
                 list-style-type: none;
                 list-style: none;
                 border: 1px groove gray;
                 border-style: inset;
-                padding:0px;
+                padding:10px;
                 border-radius: 20px;
             }
-            textarea{
-                width: 90%;
-                height: 100px;
-                resize: vertical;
-                background: lightyellow;
-            }
-            .escond{
-                visibility: hidden;
-                width:0px;
-            }
 
-            .formes{
-                text-align: center;
+            a {
+                text-decoration:none;
+                text-align:center;
+                grid-column:1/-1;
+                justify-self:center;
+                background:gold;
+                border:groove;
+                padding:10px;
+                margin: 5px;
+                max-width:200px;
+                font-size: x-large;
                 
             }
-            .btn{
-                min-width: 50px;
-                min-height: 20px;
-                background-color:"blue"
-            }
-            .materia{
-                text-align:left;
-                margin-left:47%;
-            }
-            <`}</style>
+            `}</style>
 
 
 

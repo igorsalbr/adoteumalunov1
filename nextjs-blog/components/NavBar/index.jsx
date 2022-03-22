@@ -7,11 +7,13 @@ function NavBar() {
         <header>
 
             <div className='container'>
-                <img src="adoteimg.png" className='foto' alt='adote' width={250} height={250}/>
-                <div>Tire suas dúvidas!<Link href='/questoes'><p className='item item1'>Questões</p></Link></div>
-                <div>Conheça o Adote<Link href='/sobre'><p className='item item2'>Sobre nós</p></Link></div>
-                {user ? <div>Veja suas dúvidas<Link  href='/plataforma' ><p className='item item3'>Area do Aluno</p></Link></div> :
-                    <div>Faça Login para salvar duvidas<Link  href='/inscricao' ><p className='item item3'>Entrar</p></Link></div>}
+                <a href="/" className='foto'>
+                    <img src="adoteimg.png" className="livro" alt='adote' width={250} height={250}/>
+                </a>
+                <div className="nowrap">Tire suas dúvidas!<Link href='/questoes'><p className='item item1'>Questões</p></Link></div>
+                <div className="nowrap">Conheça o Adote<Link href='/sobre'><p className='item item2'>Sobre nós</p></Link></div>
+                {user ? <div className="nowrap">Veja suas dúvidas salvas<Link  href='/plataforma' ><p className='item item3'>Area do Aluno</p></Link></div> :
+                    <div className="nowrap">Faça Login para salvar duvidas<Link  href='/inscricao' ><p className='item item3'>Entrar</p></Link></div>}
             </div>
             <style jsx>{`
         .container{
@@ -23,6 +25,14 @@ function NavBar() {
         .foto{
             grid-column: 1/-1;
             justify-self:center;
+
+
+    }
+        .livro {
+            margin: 10px 0px;
+            border: solid black 1px;
+            border-radius:9999px;
+            
     }
         .item{
             padding: 3px;
@@ -31,6 +41,8 @@ function NavBar() {
             border-radius: 5px;
             text-align:center;
             font-size: large;
+            white-space:nowrap;
+
         }
         .item:hover{
             background-color:gold;
@@ -40,6 +52,7 @@ function NavBar() {
         }
         .item1{
             grid-column-start:1;
+
             
 
         }
@@ -51,6 +64,15 @@ function NavBar() {
             grid-column-start:3;
 
 }
+@media screen and (max-width: 500px) {
+        .nowrap{
+            white-space:nowrap;
+            font-size:small;
+
+}
+        .item{
+            font-size:normal;
+        }
         
       `}</style>
 

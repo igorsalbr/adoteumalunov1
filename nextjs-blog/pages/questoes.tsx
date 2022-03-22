@@ -54,17 +54,10 @@ function questoes() {
                 <br />
                 <h3 className='convocacao'>Este site foi feito de alunos para alunos! Sintam-se à vontade para ajudar outras pessoas respondendo dúvidas!</h3>
                 <br />
-                <ul className='avisos'>
-                    <h3>Avisos:</h3>
-                    <li>&bull; Ao se cadastrar, suas duvidas ficam salvas na área do aluno.</li>
-                    <li>&bull; Datas de proximos vest?</li>
-                    <li>&bull; Selecione o tópico da duvida</li>
-                    <li>&bull; Explique a duvida e anexe fotos que ajudem a entender</li><br />
-                </ul>
                 <form className='formes' >
                     <label htmlFor="text">Explique sua dúvida</label>
                     <br />
-                    <textarea onChange={inputsHandler} value={textField} type='text' name='text'></textarea><br />
+                    <textarea onChange={inputsHandler} value={textField} name='text'></textarea><br />
                     <input onChange={inputsHandler} value={fileField} className="escond" multiple type='file' name='file' id="icon-button-file" />
                     <label htmlFor="icon-button-file">
                         <IconButton color="primary" component="span">
