@@ -1,4 +1,35 @@
-*{
-    background-color: #FFFFE0;
 
+/* Components */
+
+* {
+  margin: 0;
+  padding: 0;
 }
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb57;
+}
+
+
+html,
+#__next {
+  height: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(rgb(26,135, 255), white);
+}
+
+body {
+  font-family: 'Poppins';
+  -webkit-font-smoothing: antialiased !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+}
+

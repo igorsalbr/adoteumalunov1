@@ -20,18 +20,19 @@ function inscricao() {
 
     return <>
 
-        <div className="container">
+        <header className="container">
             <NavBar />
             <br /><br />
             <br /><br />
 
 
-        </div>
+        </header>
         <br />
         <Footer />
 
 
         <style jsx>{`
+        
         
       `}</style>
 
