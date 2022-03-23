@@ -52,8 +52,6 @@ function questoes() {
             <br /><br />
             <div className="body">
                 <br />
-                <h3 className='convocacao'>Este site foi feito de alunos para alunos! Sintam-se à vontade para ajudar outras pessoas respondendo dúvidas!</h3>
-                <br />
                 <form className='formes' >
                     <label htmlFor="text">Explique sua dúvida</label>
                     <br />

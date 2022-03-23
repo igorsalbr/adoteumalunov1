@@ -8,7 +8,7 @@ function NavBar() {
 
             <div className='container'>
                 <a href="/" className='foto'>
-                    <img src="adoteimg.png" className="livro" alt='adote' width={250} height={250}/>
+                    <img src="adoteimg.png" className="livro" alt='adote' width={300} height={300}/>
                 </a>
                 <div className="nowrap">Tire suas dúvidas!<Link href='/questoes'><p className='item item1'>Questões</p></Link></div>
                 <div className="nowrap">Conheça o Adote<Link href='/sobre'><p className='item item2'>Sobre nós</p></Link></div>
@@ -30,8 +30,6 @@ function NavBar() {
     }
         .livro {
             margin: 10px 0px;
-            border: solid black 1px;
-            border-radius:9999px;
             
     }
         .item{
